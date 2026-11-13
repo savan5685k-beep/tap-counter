@@ -1,0 +1,182 @@
+* {
+  box-sizing: border-box;
+  -webkit-tap-highlight-color: transparent;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #101010;
+  color: #ffffff;
+  transition: background .25s, color .25s;
+  user-select: none;
+}
+
+body.light {
+  background: #f4f4f4;
+  color: #151515;
+}
+
+#tap-area {
+  min-height: 100dvh;
+  padding: 28px 24px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+header, footer, nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.brand {
+  font-size: 15px;
+  letter-spacing: 3px;
+  font-weight: bold;
+}
+
+button {
+  background: transparent;
+  color: inherit;
+  border: 1px solid #77777755;
+  border-radius: 12px;
+  padding: 12px 15px;
+  font-size: 11px;
+  letter-spacing: 1px;
+}
+
+.counter {
+  text-align: center;
+  pointer-events: none;
+}
+
+#count {
+  font-size: clamp(80px, 22vw, 140px);
+  font-weight: 700;
+  letter-spacing: -5px;
+  font-variant-numeric: tabular-nums;
+  transition: transform .12s;
+}
+
+#count.pop {
+  transform: scale(1.12);
+}
+
+.counter p, .stats span {
+  font-size: 10px;
+  letter-spacing: 3px;
+  opacity: .55;
+}
+
+#target-message {
+  font-size: 12px;
+  margin-top: 22px;
+  min-height: 18px;
+}
+
+.stats {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.stats strong {
+  font-size: 20px;
+}
+
+nav {
+  flex-wrap: wrap;
+}
+
+nav button {
+  flex: 1 1 40%;
+}
+
+button:active {
+  transform: scale(.95);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    transition: none !important;
+  }
+}
+
+.modal {
+  position: fixed;
+  inset: 0;
+  z-index: 10;
+  background: #000b;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 22px;
+}
+
+.modal-box {
+  width: 100%;
+  max-width: 380px;
+  max-height: 80vh;
+  overflow-y: auto;
+  background: #202020;
+  color: white;
+  border: 1px solid #ffffff25;
+  border-radius: 20px;
+  padding: 24px;
+}
+
+.light .modal-box {
+  background: white;
+  color: #151515;
+}
+
+.modal-heading {
+  font-size: 17px;
+  letter-spacing: 2px;
+  font-weight: bold;
+  margin-bottom: 25px;
+}
+
+.modal-content label {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 14px 0;
+  border-bottom: 1px solid #8884;
+  font-size: 13px;
+}
+
+.modal-content input {
+  width: 20px;
+  height: 20px;
+  accent-color: #888;
+}
+
+.modal-close {
+  width: 100%;
+  margin-top: 22px;
+}
+
+.history-item {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+  padding: 14px 0;
+  border-bottom: 1px solid #8884;
+}
+
+.history-item small {
+  opacity: .6;
+}
+
+@keyframes pop {
+  50% { transform: scale(1.12); }
+}
+
+#count.pop {
+  animation: pop .16s ease-out;
+}

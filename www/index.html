@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <meta name="theme-color" content="#101010">
+  <title>Tap Counter</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main id="tap-area">
+    <header>
+      <div class="brand">TAP COUNTER</div>
+      <button id="theme-btn" class="small-btn">LIGHT</button>
+    </header>
+
+    <section class="counter">
+      <div id="count">0</div>
+      <p>TOTAL TAPS</p>
+      <div id="target-message"></div>
+    </section>
+
+    <footer>
+      <div class="stats">
+        <span>BEST RECORD</span>
+        <strong id="best">0</strong>
+      </div>
+      <div class="stats">
+        <span>TARGET</span>
+        <strong id="target">100</strong>
+      </div>
+    </footer>
+
+    <nav>
+      <button id="undo">UNDO</button>
+      <button id="reset">RESET</button>
+      <button id="settings">SETTINGS</button>
+      <button id="history">HISTORY</button>
+    </nav>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>

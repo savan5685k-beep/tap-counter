@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">Tap Counter</string>
+    <string name="title_activity_main">Tap Counter</string>
+    <string name="package_name">com.savan5685k.tapcounter</string>
+    <string name="custom_url_scheme">com.savan5685k.tapcounter</string>
+</resources>
